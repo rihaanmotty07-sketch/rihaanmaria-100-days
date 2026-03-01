@@ -2,34 +2,88 @@
 <html>
 <head>
 <title>Happy 100 Days Kuttu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
 <style>
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
-  background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
   text-align: center;
   color: white;
 }
 
+/* Floating background text */
+body::before {
+  content: "100 DAYS OF LOVE ❤️ 100 DAYS OF LOVE ❤️ 100 DAYS OF LOVE ❤️";
+  position: fixed;
+  font-size: 40px;
+  opacity: 0.05;
+  width: 200%;
+  animation: moveText 20s linear infinite;
+}
+
+@keyframes moveText {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 .container {
-  background: rgba(0,0,0,0.3);
-  padding: 40px;
-  border-radius: 20px;
-  width: 80%;
-  max-width: 600px;
+  margin: 50px auto;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 30px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 700px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
-  font-size: 28px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 38px;
+  margin-bottom: 20px;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.6;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* Image styling */
+.photo {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  color: white;
+  font-size: 20px;
+  animation: float 6s infinite ease-in;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
 }
 </style>
 </head>
@@ -37,29 +91,57 @@ p {
 <body>
 
 <div class="container">
+
+<img src="us.jpg" class="photo">
+
 <h1>Happy 100 Days, My Kuttu ❤️</h1>
 
 <p>
-These 100 days with you are very special for me.<br><br>
+These 100 days with you are very special for me da.<br><br>
 
-From November 25 till now, everything feels different because of you.<br><br>
+From November 25 till now, every single day you made my life different. Before you, it was normal. After you, everything got meaning.<br><br>
 
-You are my soft girl, my little introvert queen.<br><br>
+You are my soft girl. Little introvert. But the love you give me is full, pure, and real.<br><br>
 
-The way you love me, care for me, order me around like boss… I love everything.<br><br>
+When you say “I love you”, I feel it. Not just hear it.<br><br>
 
-And listen… even your so-called “big forehead” is the cutest thing ever. Don’t ever feel insecure about it.<br><br>
+You always act like boss in our relationship, ordering me and telling me what to do… but honestly I like it. My queen behaviour suits you.<br><br>
 
-When we hold hands, I still get butterflies.<br><br>
+When we hold hands, I get so many butterflies.<br><br>
 
-Thank you for loving me the way you do.<br><br>
+About your so-called “big forehead” — don’t ever feel insecure okay? I tease you, but I truly love it.<br><br>
 
-I will always choose you.<br><br>
+Your childish cringe habits, your care, your love without ego — everything makes me fall for you again and again.<br><br>
 
-— Yours forever ❤️
+These 100 days are 100 proofs that I chose the right girl.<br><br>
+
+You are my peace. My happiness. My comfort.<br><br>
+
+If life goes the way I want, I want to marry you one day.<br><br>
+
+Happy 100 days, my Mallu ❤️<br>
+I will always choose you.
 </p>
 
 </div>
+
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 15 + "px";
+  heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}
+
+setInterval(createHeart, 400);
+</script>
 
 </body>
 </html>
